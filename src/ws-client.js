@@ -2,9 +2,11 @@
 import WebSocket from "ws";
 import EventBus from "./event-bus.js";
 
+
 class PriceWatcherClient {
     constructor(url) {
         this.url = url;
+      
         this.bus = new EventBus();
         this.socket = new WebSocket(url); // this actually opens the connection.
 
@@ -15,6 +17,7 @@ class PriceWatcherClient {
         this.socket.onmessage = (event) => {
             const trade = JSON.parse(event.data)
             this.bus.emit('trade' , trade);
+            
 
         };
 
