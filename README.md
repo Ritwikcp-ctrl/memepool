@@ -23,11 +23,11 @@ Streams live BTC/USDT trades from Binance's public WebSocket API, decouples inge
 
 ## Status
 
-- [x] WebSocket client — live connection, parsing raw trade data
-- [x] Event bus — decoupled pub/sub working end to end
-- [ ] Queue — buffering layer
-- [ ] Worker — controlled processing loop
-- [ ] Alert engine — configurable price thresholds
+- [done] WebSocket client — live connection, parsing raw trade data
+- [done] Event bus — decoupled pub/sub working end to end
+- [done ] Queue — buffering layer
+- [done ] Worker — controlled processing loop
+- [done ] Alert engine — configurable price thresholds
 
 ## Run it
 
