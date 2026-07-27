@@ -15,9 +15,14 @@ class Worker {
         this.running = false;
     }
 
+    get size() {
+    return this.items.length;
+}
+
     async loop () {
         while(this.running) {
-            if(this.queue.size>0) {
+          
+            if(this.queue.size()>0) {
                const item = this.queue.dequeue();
                this.onProcess (item); 
             } else {
